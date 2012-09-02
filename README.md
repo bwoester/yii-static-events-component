@@ -5,9 +5,9 @@ Allows you to register event handlers on class base.
 
 To make this possible, the extension consists of two pieces:
 
-1) The EventRegistry - an application component that serves as single point
+1. The EventRegistry - an application component that serves as single point
    to register your event handlers.
-2) The EventBridgeBehavior - a behavior that observes its owner and forwards
+2. The EventBridgeBehavior - a behavior that observes its owner and forwards
    intercepted events to the EventRegistry which will in turn invoke registered
    event handlers.
 
