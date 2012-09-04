@@ -106,9 +106,18 @@ loadable.
             Yii::log( 'CApplication::onEndRequest - first handler', CLogger::LEVEL_TRACE );
           },
           function( $event ) {
-            Yii::log( 'CApplication::onEndRequest - first handler', CLogger::LEVEL_TRACE );
+            Yii::log( 'CApplication::onEndRequest - second handler', CLogger::LEVEL_TRACE );
           },
         ),
+      ),
+    ),
+  ),
+  'log'=>array(
+    'class'=>'CLogRouter',
+    'routes'=>array(
+      // enable web log route to see what we just logged
+      array(
+        'class'=>'CWebLogRoute',
       ),
     ),
   ),
