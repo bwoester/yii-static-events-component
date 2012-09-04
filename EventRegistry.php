@@ -437,15 +437,18 @@ class EventRegistry extends CApplicationComponent
     {
       $additionalEventHandlers = $this->getStaticEventHandlersStrict( $inspectedClass, $event );
 
-      if ($eventHandlers === false)
+      if ($additionalEventHandlers !== false)
       {
-        $eventHandlers = new CList();
-        $eventHandlers->copyFrom( $additionalEventHandlers );
+        if ($eventHandlers === false)
+        {
+          $eventHandlers = new CList();
+          $eventHandlers->copyFrom( $additionalEventHandlers );
+        }
+        else {
+          $eventHandlers->mergeWith( $additionalEventHandlers );
+        }        
       }
-      else {
-        $eventHandlers->mergeWith( $additionalEventHandlers );
-      }
-
+      
       $inspectedClass = get_parent_class( $inspectedClass );
     }
     while( $inspectedClass !== false && $this->componentHasEvent($inspectedClass,$event) );
