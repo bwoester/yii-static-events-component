@@ -1,0 +1,23 @@
+{
+    "name": "bwoester/yii-static-events-component",
+    "type": "library",
+    "description": "Attach events on class base.",
+    "keywords": ["yii","static","event","component"],
+    "homepage": "https://github.com/bwoester/yii-static-events-component",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Benjamin Wöster",
+            "email": "benjamin.woester@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/bwoester/yii-static-events-component/issues",
+        "source": "https://github.com/bwoester/yii-static-events-component"
+    },
+    "require": {
+        "php": ">=5.1.0",
+        "bwoester/yii-event-interceptor": "1.0.*"
+    }
+}
+
